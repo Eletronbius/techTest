@@ -1,14 +1,14 @@
 import { useApplication, useTick } from "@pixi/react"
 import { Assets, Sprite, Texture } from "pixi.js";
 import { useEffect, useRef, useState } from "react";
-import { useControls } from "../hooks/UseControls";
 import { useCollision } from "../Context/CollisionContext";
 
 
 export const Chaser =() => {
     const { app } = useApplication();
     const [position, setPosition] = useState({x:app.screen.width/3+100,y:app.screen.height/2});
-    const [rotation, setRotation] = useState(0);
+    const [rotation,setRotation] = useState(0);
+    setRotation(3*Math.PI/2)
     const spriteRef = useRef<Sprite>(null);
     const [texture, setTexture] = useState(Texture.EMPTY);
     const register = useCollision();
@@ -24,7 +24,7 @@ export const Chaser =() => {
     },[texture])
     
     
-    useTick((ticker)=>{
+    useTick(()=>{
         const sprite = spriteRef.current
         if (!sprite) return;
         const bounds = sprite.getBounds();
