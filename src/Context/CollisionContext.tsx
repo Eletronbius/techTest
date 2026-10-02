@@ -29,7 +29,7 @@ export const CollisionProvider = ({ children }: { children: ReactNode })=>{
   const checkAABB = (rect: {x:number,y:number,height:number,width:number,rotation:number}): boolean => {
     const tempBox = systemRef.current.createBox({ x: rect.x, y: rect.y }, rect.width, rect.height,{angle:rect.rotation});
     let isColliding = false;
-    systemRef.current.checkOne(tempBox, (response) => {
+    systemRef.current.checkOne(tempBox, () => {
       isColliding = true;
     });
 
