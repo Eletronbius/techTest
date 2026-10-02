@@ -15,7 +15,7 @@ export const PlayerBoatSprite =() => {
     const register = useCollision();
     useEffect(()=>{
         if (texture === Texture.EMPTY){
-            const imageUrl = new URL('./assets/png/default/ships/ship_1.png', import.meta.url).href;
+            const imageUrl = new URL('./png/default/ships/ship_1.png', import.meta.url).href;
             Assets.load(imageUrl).then((result) =>{
                 setTexture(result);
             })
