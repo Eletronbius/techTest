@@ -72,7 +72,7 @@ export default function App() {
 
       </SpriteSheetProvider>
       <PlayerBoatSprite />
-   
+      <Chaser/>
       
       </CollisionProvider>
     </Application>
