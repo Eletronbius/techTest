@@ -31,7 +31,6 @@ export const CollisionProvider = ({ children }: { children: ReactNode })=>{
     let isColliding = false;
     systemRef.current.checkOne(tempBox, (response) => {
       isColliding = true;
-      console.log(response.a)
     });
 
     systemRef.current.remove(tempBox);
