@@ -7,8 +7,7 @@ import { useCollision } from "../Context/CollisionContext";
 export const Chaser =() => {
     const { app } = useApplication();
     const [position, setPosition] = useState({x:app.screen.width/3+100,y:app.screen.height/2});
-    const [rotation,setRotation] = useState(0);
-    setRotation(3*Math.PI/2)
+    const [rotation, setRotation] = useState(0);
     const spriteRef = useRef<Sprite>(null);
     const [texture, setTexture] = useState(Texture.EMPTY);
     const register = useCollision();
@@ -21,6 +20,7 @@ export const Chaser =() => {
         const sprite = spriteRef.current
         if (!sprite) return;
         register?.register({x:position.x,y:position.y,height:sprite.height,width:sprite.width,isStatic:false})
+            setRotation(3*Math.PI/2)
     },[texture])
     
     

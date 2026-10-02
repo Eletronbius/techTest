@@ -54,9 +54,7 @@ export const PlayerBoatSprite =() => {
 
             if(register?.checkAABB({x:x+dx,y:y+dy,width:sprite.width-50,height:sprite.height-50,rotation:rotation}))
                 {
-                    console.log(sprite.rotation)
                     return{x:x,y:y}
-
                 }
 
             

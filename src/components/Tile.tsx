@@ -1,4 +1,3 @@
-import { Sprite } from "pixi.js";
 import { useSpritesheet } from "../Context/SpriteSheetProvider"
 import { useApplication } from "@pixi/react";
 import { useCollision } from "../Context/CollisionContext";
