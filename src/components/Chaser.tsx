@@ -6,7 +6,7 @@ import { useCollision } from "../Context/CollisionContext";
 
 export const Chaser =() => {
     const { app } = useApplication();
-    const [position, setPosition] = useState({x:app.screen.width/3+100,y:app.screen.height/2});
+    const [position, setPosition] = useState({x:app.screen.width/3,y:app.screen.height/2+100});
     const [rotation, setRotation] = useState(0);
     const spriteRef = useRef<Sprite>(null);
     const [texture, setTexture] = useState(Texture.EMPTY);
