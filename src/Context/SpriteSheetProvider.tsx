@@ -15,7 +15,8 @@ export const SpriteSheetProvider = ({ children }: { children: ReactNode }) => {
     useEffect(()=>{
 
         const loadSheet= async ()=>{
-            const baseTexture = await Assets.load("src/assets/tilesheet/tiles_sheet.png");
+            const imageUrl = new URL("src/assets/tilesheet/tiles_sheet.png", import.meta.url).href;
+            const baseTexture = await Assets.load(imageUrl);
             const sheet = new Spritesheet(baseTexture, TileSheetAtlas);
             await sheet.parse()
 
