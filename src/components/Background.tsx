@@ -12,7 +12,7 @@ export const Background = () =>{
     useEffect(()=>{
 
         const loadTileSheet = async () => {
-            const baseTexture = await Assets.load("src/assets/tilesheet/tiles_sheet.png")
+            const baseTexture = await Assets.load("/assets/tilesheet/tiles_sheet.png")
             const sheet = new Spritesheet(baseTexture,TileSheetAtlas)
             await sheet.parse()
 
