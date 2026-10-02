@@ -15,8 +15,7 @@ export const PlayerBoatSprite =() => {
     const register = useCollision();
     useEffect(()=>{
         if (texture === Texture.EMPTY){
-            const imageUrl = new URL('./png/default/ships/ship_1.png', import.meta.url).href;
-            Assets.load(imageUrl).then((result) =>{
+            Assets.load("/assets/png/default/ships/ship_1.png").then((result) =>{
                 setTexture(result);
             })
         }
@@ -56,6 +55,7 @@ export const PlayerBoatSprite =() => {
             if(register?.checkAABB({x:x+dx,y:y+dy,width:sprite.width-50,height:sprite.height-50,rotation:rotation}))
                 {
                     return{x:x,y:y}
+
                 }
 
             

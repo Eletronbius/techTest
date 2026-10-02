@@ -13,8 +13,7 @@ export const Chaser =() => {
     const register = useCollision();
     useEffect(()=>{
         if (texture === Texture.EMPTY){
-            const imageUrl = new URL('./png/default/ships/ship_20.png', import.meta.url).href;
-            Assets.load(imageUrl).then((result) =>{
+            Assets.load("/assets/png/default/ships/ship_20.png").then((result) =>{
                 setTexture(result);
             })
         }
