@@ -1,1 +1,0 @@
-export type Direction = "UP" | "LEFT" | "RIGHT"

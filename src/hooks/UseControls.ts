@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { Direction } from "../types/common";
+type Direction = "UP" | "LEFT" | "RIGHT";
 const keys: Record<string,Direction>={
     
     ArrowUp:"UP",
